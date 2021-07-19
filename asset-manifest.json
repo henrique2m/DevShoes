@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/DevShoes/static/js/main.667e59b9.chunk.js",
+    "main.js.map": "/DevShoes/static/js/main.667e59b9.chunk.js.map",
+    "runtime-main.js": "/DevShoes/static/js/runtime-main.0178f790.js",
+    "runtime-main.js.map": "/DevShoes/static/js/runtime-main.0178f790.js.map",
+    "static/js/2.6cf79bf3.chunk.js": "/DevShoes/static/js/2.6cf79bf3.chunk.js",
+    "static/js/2.6cf79bf3.chunk.js.map": "/DevShoes/static/js/2.6cf79bf3.chunk.js.map",
+    "index.html": "/DevShoes/index.html",
+    "static/js/2.6cf79bf3.chunk.js.LICENSE.txt": "/DevShoes/static/js/2.6cf79bf3.chunk.js.LICENSE.txt",
+    "static/media/avatar.4f83d9f7.jpg": "/DevShoes/static/media/avatar.4f83d9f7.jpg",
+    "static/media/backgroundFooter.adac7817.svg": "/DevShoes/static/media/backgroundFooter.adac7817.svg",
+    "static/media/backgroundHeader.1a9ca82f.svg": "/DevShoes/static/media/backgroundHeader.1a9ca82f.svg",
+    "static/media/blackFriday.89ace6cc.svg": "/DevShoes/static/media/blackFriday.89ace6cc.svg",
+    "static/media/devshoesBlack.6741ea1f.svg": "/DevShoes/static/media/devshoesBlack.6741ea1f.svg",
+    "static/media/devshoesColor.4734445b.svg": "/DevShoes/static/media/devshoesColor.4734445b.svg",
+    "static/media/reactShoes.a86f614d.png": "/DevShoes/static/media/reactShoes.a86f614d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0178f790.js",
+    "static/js/2.6cf79bf3.chunk.js",
+    "static/js/main.667e59b9.chunk.js"
+  ]
+}
