@@ -3,8 +3,6 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
 :root {
   font-size: 60%;
-  --color-background: #FFFFFF;
-  --color-text-base: #292929;
 }
 
 * {
@@ -19,9 +17,8 @@ html, body, #root {
 }
 
 body {
-  background: var(--color-background);
+  background: #FFFFFF;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  /* overflow: hidden; */
   overflow-x: hidden;
 }
 
@@ -29,7 +26,7 @@ body,
 input,
 button,
 textarea {
-  color: var(--color-text-base);
+  color: #292929;
   border: 0;
   box-shadow: 0 0 0 0;
   outline: 0;

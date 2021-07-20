@@ -1,5 +1,7 @@
-import React, { FormEvent, useState } from 'react';
-
+import React from 'react';
+import Form from '../../components/Form';
+import Feedback from '../../components/Feedback';
+import Shoes from '../../components/Shoes';
 import {
     Container, 
     Header, 
@@ -7,151 +9,68 @@ import {
     Slogan, 
     Content, 
     BlackFriday, 
-    Form, 
-    FormHeader, 
-    FormTitle,
-    BoxInput,
-    FormLabel, 
-    FormInput,  
-    FormSubmit,
-    BoxFeedback,
-    CardFeedback,
-    AvatarUserFeedback,
-    TextUserFeedBack,
-    BoxShoes,
-    CardShoes,
-    CardShoesHeader,
-    CardShoesImage,
-    CardShoesName,
-    CardShoesFooter,
     BoxEndLogo,
     Footer,
-  } from './styles';
+    Network,
+    LinkedIn,
+    GitHub,
+    Instagram,
+    Author,
 
+  } from './styles';
 import logoDevShoesBlack from '../../assets/devshoesBlack.svg';
 import logoDevShoesColor from '../../assets/devshoesColor.svg';
 import logoBlackFriday from '../../assets/blackFriday.svg';
-import avatar from '../../assets/avatar.jpg';
-import reactShoes from '../../assets/reactShoes.png';
-
+import instagram from '../../assets/Instagram.png';
+import linkedin from '../../assets/LinkedIn.png';
+import github from '../../assets/GitHub.png';
 
 
 const LandingPage = () =>  {
-  const [name, setName ] = useState('');
-  const [email, setEmail ] = useState('');
-
-  const requestForm =  (event: FormEvent) => {
-    event.preventDefault();
-
-    const dataUser = { 
-      name: name,
-      email: email,
-    }
-
-    localStorage.setItem('user', JSON.stringify(dataUser));
-  }
-
+ 
   return (
     <Container>
       <Header>
         <Logo src={logoDevShoesBlack}></Logo>
-        <Slogan>Resolva bugs com estilo</Slogan>
+        <Slogan>Solucione bugs com estilo</Slogan>
       </Header>
 
       <Content>
         <BlackFriday src={logoBlackFriday}/>
-        <Form onSubmit={requestForm}>
-          <FormHeader>
-            <FormTitle>
-            Receba as melhores promoções em primeira mão
-            </FormTitle>
-          </FormHeader>
-          <BoxInput>
-            <div>
-              <FormLabel htmlFor="name">Nome*</FormLabel>
-              <FormInput 
-                placeholder="Seu primeiro nome" name="name"
-                value={name}
-                onChange = {(event) => setName(event.target.value)}
-              />
-            </div>
-            <div>
-              <FormLabel htmlFor="email">Email*</FormLabel>
-              <FormInput 
-                placeholder="Seu melhor email" name="email"
-                value={email}
-                onChange = {(event) => setEmail(event.target.value)}
-              />
-            </div>
-            <FormSubmit type="submit">QUERO SER O PRIMEIRO</FormSubmit>
-          </BoxInput>
-  
-        </Form>
+        <Form />
       </Content>
 
-      <BoxFeedback>
-        <CardFeedback>
-          <AvatarUserFeedback src={avatar} />
-          <TextUserFeedBack>
-            "Comprei o modelo React Shoes e não me arrependo, 
-            super confortável e a entrega foi rápida"
-          </TextUserFeedBack>
-        </CardFeedback>
-
-        <CardFeedback>
-          <AvatarUserFeedback src={avatar}/>
-          <TextUserFeedBack>
-            "Comprei o modelo React Shoes e não me arrependo, 
-            super confortável e a entrega foi rápida"
-          </TextUserFeedBack>
-        </CardFeedback>
-      </BoxFeedback>
-
-
-      <BoxShoes>
-        <CardShoes>
-          <CardShoesHeader>
-            <CardShoesImage src={reactShoes}/>
-          </CardShoesHeader>
-
-          <CardShoesName>Tênis Git Push --Force </CardShoesName>
-          <CardShoesFooter>
-            -50%
-          </CardShoesFooter>
-        </CardShoes>
-
-        <CardShoes>
-          <CardShoesHeader>
-            <CardShoesImage src={reactShoes}/>
-          </CardShoesHeader>
-
-          <CardShoesName>Tênis Git Push --Force </CardShoesName>
-          <CardShoesFooter>
-            -50%
-          </CardShoesFooter>
-
-        </CardShoes>
-
-        <CardShoes>
-          <CardShoesHeader>
-            <CardShoesImage src={reactShoes}/>
-          </CardShoesHeader>
-
-          <CardShoesName>Tênis Git Push --Force </CardShoesName>
-          <CardShoesFooter>
-            -50%
-          </CardShoesFooter>
-
-        </CardShoes>
-      </BoxShoes>
+      <Feedback />
+      <Shoes />
 
       <BoxEndLogo>
           <Logo src={logoDevShoesColor}></Logo>
       </BoxEndLogo>
 
-     <Footer />
+     <Footer>
+       <Network>
+         <LinkedIn
+          href="https://www.linkedin.com/in/henrique-moreira-51699618b/" 
+          target="_blank"
+          >
+          <img src={linkedin} alt="Instagram"/>
+         </LinkedIn>
+         <GitHub href="https://github.com/henrique2m" target="_blank">  
+          <img src={github} alt="github"/>
+         </GitHub>
+         <Instagram 
+          href="https://www.instagram.com/henrique_moreira2/" 
+          target="_blank"
+          >
+          <img src={instagram} alt="instagram"/>
+         </Instagram>
+       </Network>
+       <Author>
+         Henrique Moreira
+       </Author>
+     </Footer>
+     
     </Container>
-
   );
 }
 
